@@ -1,5 +1,5 @@
 // PASTE YOUR KEY INSIDE THE QUOTES BELOW
-const apiKey = "AIzaSyC8vYuLpFSs0QYcjrBd19joY3BB-uGsQSU"; 
+const apiKey = "AIzaSyDfYCyPsy4byyOjCpXg_jOnT-wgqHTFark"; 
 
 const chatInput = document.querySelector("#user-input");
 const sendButton = document.querySelector("#send-btn");
@@ -14,7 +14,7 @@ async function getAIResponse() {
     chatInput.value = "";
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
