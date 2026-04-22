@@ -1,1 +1,91 @@
+:root {
+    --bg-dark: #0f172a;
+    --sidebar-dark: #1e293b;
+    --accent-blue: #38bdf8;
+    --text-white: #f8fafc;
+    --msg-ai: #334155;
+    --msg-user: #0284c7;
+}
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    height: 100vh;
+    display: flex;
+}
+
+.app-container { display: flex; width: 100%; overflow: hidden; }
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: var(--sidebar-dark);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 1px solid #334155;
+}
+
+.logo { font-size: 24px; font-weight: 600; color: var(--accent-blue); margin-bottom: 40px; display: flex; gap: 10px; align-items: center; }
+
+.nav-item { padding: 12px; margin-bottom: 8px; border-radius: 8px; cursor: pointer; transition: 0.3s; color: #94a3b8; }
+.nav-item:hover, .nav-item.active { background: #334155; color: white; }
+
+/* Main Chat Area */
+.main-content { flex: 1; display: flex; flex-direction: column; position: relative; }
+
+header { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; }
+
+.chat-window {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 15px 20px;
+    border-radius: 15px;
+    line-height: 1.5;
+}
+
+.ai-message { background: var(--msg-ai); align-self: flex-start; border-bottom-left-radius: 2px; }
+.user-message { background: var(--msg-user); align-self: flex-end; border-bottom-right-radius: 2px; }
+
+/* Input Styling */
+.input-area { padding: 30px 40px; }
+.input-wrapper {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    border: 1px solid #475569;
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+}
+
+#send-btn {
+    background: var(--accent-blue);
+    border: none;
+    color: #0f172a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#send-btn:hover { opacity: 0.9; }
