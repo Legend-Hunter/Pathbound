@@ -1,5 +1,5 @@
 // PASTE YOUR KEY INSIDE THE QUOTES BELOW
-const apiKey = "AIzaSyAM56ZE4htJfj2BHTf8tMAZB9jN1P-Ombs"; 
+const apiKey = "AIzaSyC8vYuLpFSs0QYcjrBd19joY3BB-uGsQSU"; 
 
 const chatInput = document.querySelector("#user-input");
 const sendButton = document.querySelector("#send-btn");
